@@ -109,8 +109,8 @@ st.markdown("""
 @st.cache_data
 def load_data():
     try:
-        resp_df = pd.read_csv(r"C:\Users\HP\Documents\SOCMED\cleaned_respondents_data.csv")
-        vendor_df = pd.read_csv(r"C:\Users\HP\Documents\SOCMED\cleaned_vendor_data.csv")
+        resp_df = pd.read_csv("cleaned_respondents_data.csv")
+        vendor_df = pd.read_csv("cleaned_vendor_data.csv")
         return resp_df, vendor_df
     except Exception as e:
         st.error(f"Error loading files: {e}. Ensure the CSVs are in the same folder.")
@@ -137,7 +137,7 @@ if resp_df is not None and vendor_df is not None:
         st.markdown('<div class="main-title">🎪 Event-Centric Influencer Development Using Dynamic Community Detection Dashboard</div>', unsafe_allow_html=True)
     
 with logo_top_right_col:
-        path_logo = r"C:/Users/HP/Documents/SOCMED/84808cf8-2dca-4946-817c-64ceb9fedfce.jpg"
+        path_logo = "84808cf8-2dca-4946-817c-64ceb9fedfce.jpg"
         
         try: 
             st.image(path_logo, use_container_width=True)
@@ -375,7 +375,7 @@ elif page == "📊 Analytics Report":
                         
         with col_influencer:
             st.markdown("### 👑 5. Key Influencer Analysis (SNA Network Graph)")
-            sna_image_path = r"C:\Users\HP\Documents\SOCMED\SNA.jpg"
+            sna_image_path = "SNA.jpg"
             try:
                 st.image(
                     sna_image_path, 
